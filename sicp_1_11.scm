@@ -1,4 +1,5 @@
 #lang racket
+
 (define (f n)
    (cond ((< n 3) n)
          (else (+ (f (- n 1))
@@ -18,6 +19,8 @@
     ((< n 3) acc1)
     (else (fit (- n 1) (+ acc1 (* 2 acc2) (* 3 acc3)) acc1 acc2)
   )))
+
+
 
 ; it is important to get the correct initial values in acc1,acc2, acc3 namely
 ; (fit n 2 1 0)
